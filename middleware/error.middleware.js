@@ -3,8 +3,7 @@ const errorMiddleware = (err, req, res, next) => {
     let error = { ...err };
     error.message = err.message;
 
-    // Log to console for debugging
-    console.error("Error:", error);
+    console.error(err);
     // Mongoose bad ObjectId error
     if (err.name === "CastError") {
       res
@@ -24,7 +23,7 @@ const errorMiddleware = (err, req, res, next) => {
     }
   } catch (error) {
     console.error("Error in errorMiddleware:", error);
-    res.status(500).json({ message: "Internal Server Error" });
+    res.status(500).send({ message: "Internal Server Error" });
   }
 
   res.status(err.statusCode || 500).json({
