@@ -31,4 +31,3 @@ Currently under development — new features and endpoints will be added regular
 | bcrypt             | Password hashing                        |
 | dotenv             | Environment variable management         |
 | ESLint             | Code linting and formatting             |
-

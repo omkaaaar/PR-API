@@ -18,9 +18,7 @@ export const getUserSubscription = async (req, res, next) => {
     if (req.user.id !== req.params.id) {
       throw new Error("You are not authoized");
     }
-
     const userSubscriptions = await Subscription.find({ user: req.params.id });
-
     res.status(200).json({ success: true, data: userSubscriptions });
   } catch (error) {
     res.status(404).json({ messaage: "no data found" });
