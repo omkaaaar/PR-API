@@ -20,6 +20,7 @@ Currently under development — new features and endpoints will be added regular
   - Retrieve all users (admin)
   - Retrieve single user details (protected)
 
+
 ## 🛠️ Tech Stack
 
 | Tech               | Purpose                                 |
