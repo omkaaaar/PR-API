@@ -35,9 +35,7 @@ export const getSubscriptionDetails = async (req, res, next) => {
     }
 
     if (subscription.user.toString() !== req.user.id) {
-      return res
-        .status(403)
-        .json({ success: false, message: "Unauthorized access" });
+      return res.status(403).json({ success: false, message: "Unauthorized access" });
     }
 
     res.status(200).json({ success: true, data: subscription });
